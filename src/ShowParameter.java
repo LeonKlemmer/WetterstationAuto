@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ShowParameter {
 
-    GUI gui;
+    GUI gui = new GUI();
 
     public ShowParameter() throws FileNotFoundException, InterruptedException {
 
@@ -19,7 +19,7 @@ public class ShowParameter {
 
 
         for(int i = 0; i <= data.clouds.size(); i++){
-            new GUI(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
+            gui.setGuiText(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
 
             TimeUnit.SECONDS.sleep(3);
         }
