@@ -1,12 +1,12 @@
 public class Cloud {
     private String location;
-    private String temorature;
+    private String temprature;
     private String time;
     private String date;
 
-    public Cloud(String location, String temorature, String time, String date) {
+    public Cloud(String location, String temprature, String time, String date) {
         this.location = location;
-        this.temorature = temorature;
+        this.temprature = temprature;
         this.time = time;
         this.date = date;
     }
@@ -19,12 +19,12 @@ public class Cloud {
         this.location = location;
     }
 
-    public String getTemorature() {
-        return temorature;
+    public String getTemprature() {
+        return temprature;
     }
 
-    public void setTemorature(String temorature) {
-        this.temorature = temorature;
+    public void setTemprature(String temprature) {
+        this.temprature = temprature;
     }
 
     public String getTime() {
