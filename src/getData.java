@@ -2,12 +2,12 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class getData {
     public static void csvToArrayList(String path) throws FileNotFoundException {
 
-        ArrayList<String> weatherData = new ArrayList<String>();
+
 
         try {
 
