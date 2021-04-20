@@ -25,24 +25,24 @@ public class GUI {
         jf.setLocationRelativeTo(null);
         jf.getContentPane().setBackground(Color.DARK_GRAY);
 
-        //Datum
-        textDate = new JLabel();
-        textDate.setBounds(50, 25, 250, 30);
-        textDate.setFont(new Font("Calabri", Font.ITALIC,16));
-        textDate.setForeground(Color.LIGHT_GRAY);
-        textDate.setText("Datum: ");
 
-        jf.add(textDate);
+
 
         //Standort
         textLocation = new JLabel();
-        textLocation.setBounds(50, 70, 250, 30);
+        textLocation.setBounds(50, 25, 250, 30);
         textLocation.setText("Standort: ");
         textLocation.setFont(new Font("Calabri", Font.ITALIC,16));
         textLocation.setForeground(Color.LIGHT_GRAY);
         jf.add(textLocation);
 
-
+        //Datum
+        textDate = new JLabel();
+        textDate.setBounds(50, 65, 250, 30);
+        textDate.setFont(new Font("Calabri", Font.ITALIC,16));
+        textDate.setForeground(Color.LIGHT_GRAY);
+        textDate.setText("Datum: ");
+        jf.add(textDate);
 
         //Uhrzeit
         textTime = new JLabel();
@@ -77,6 +77,9 @@ public class GUI {
         jf.add(textTemperatureYear);
 
         jf.setVisible(true);
+
+
+
 
     }
 
