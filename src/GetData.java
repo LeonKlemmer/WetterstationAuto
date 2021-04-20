@@ -2,12 +2,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class GetData {
     public void csvConverter(String path) throws FileNotFoundException {
-
-        path = "C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv";
+        ArrayList<Cloud> clouds = new ArrayList<Cloud>();
+        int counter = 0;
         String line = "";
         try {
 
@@ -15,9 +16,11 @@ public class GetData {
             while((line = br.readLine()) != null){
 
                 String[] values = line.split(",");
-                System.out.println(values[0]);
-                new Cloud(values[0],values[1],values[2],values[3]);
+                System.out.println(values[0]+" "+values[1]+" "+values[2]+" "+values[3]);
+                clouds.add(new Cloud(values[0],values[1],values[2],values[3]));
+                counter++;
             }
+            System.out.println(counter);
                     } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("Error csv not found");
