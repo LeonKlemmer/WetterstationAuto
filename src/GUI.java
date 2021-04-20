@@ -10,7 +10,7 @@ public class GUI {
     JTextField textTime;
     JTextField textTemperature;
     JTextField textTemperatureMonth;
-    JTextField textTemperatureJear;
+    JTextField textTemperatureYear;
 
     public GUI() {
 
