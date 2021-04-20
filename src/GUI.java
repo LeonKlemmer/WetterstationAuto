@@ -12,7 +12,6 @@ public class GUI {
     JLabel textTemperature;
     JLabel textTemperatureMonth;
     JLabel textTemperatureYear;
-    boolean test = true;
 
 
 
