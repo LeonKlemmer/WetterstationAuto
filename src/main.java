@@ -4,5 +4,6 @@ public class main {
         System.out.println("Leon was here");
 
         System.out.println("Jan was here");
+        System.out.println("Leon hat einen kleinen Penis");
     }
 }
