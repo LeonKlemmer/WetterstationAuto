@@ -1,4 +1,4 @@
-public class cloud {
+public class Cloud {
     private String location;
     private int temorature;
     private String time;

@@ -4,14 +4,14 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class getData {
+public class GetData {
     public void csvConverter(String path) throws FileNotFoundException {
 
         path = "C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv";
         try {
 
             BufferedReader br = new BufferedReader(new FileReader(path));
-
+            //while()
                     } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("Error while creating List from csv");
