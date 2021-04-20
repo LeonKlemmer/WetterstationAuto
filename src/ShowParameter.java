@@ -21,7 +21,8 @@ public class ShowParameter {
         for(int i = 0; i <= data.clouds.size(); i++){
             gui.setGuiText(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
 
-            TimeUnit.SECONDS.sleep(3);
+            //TimeUnit.SECONDS.sleep(3);
+            TimeUnit.MINUTES.sleep(30);
         }
     }
 
