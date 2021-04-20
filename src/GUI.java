@@ -28,8 +28,6 @@ public class GUI {
         jf.getContentPane().setBackground(Color.DARK_GRAY);
 
 
-
-
         //Standort
         textLocation = new JLabel();
         textLocation.setBounds(50, 25, 250, 30);

@@ -1,10 +1,11 @@
 import java.io.FileNotFoundException;
+import java.util.concurrent.TimeUnit;
 
 public class ShowParameter {
 
+    GUI gui;
 
-
-    public ShowParameter() throws FileNotFoundException {
+    public ShowParameter() throws FileNotFoundException, InterruptedException {
 
         GetData data = new GetData();
         Average average = new Average(data.clouds);
@@ -17,8 +18,11 @@ public class ShowParameter {
         System.out.println("Lowest : "+highLow.getLowestTemp().getTemprature());
 
 
-        GUI gui = new GUI(data.clouds.get(1).getLocation(), data.clouds.get(1).getDate(), data.clouds.get(1).getTime(), data.clouds.get(1).getTemprature(), "buy full version","buy full version");
+        for(int i = 0; i <= data.clouds.size(); i++){
+            new GUI(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
 
+            TimeUnit.SECONDS.sleep(3);
+        }
     }
 
 }
