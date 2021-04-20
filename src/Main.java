@@ -10,5 +10,7 @@ public class Main {
         System.out.println("Average : "+average.getAverage());// get average temp
         System.out.println("Highest : "+highLow.getHighestTemp().getTemprature());
         System.out.println("Lowest : "+highLow.getLowestTemp().getTemprature());
+
+        GUI gui = new GUI();
     }
 }
