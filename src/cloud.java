@@ -3,7 +3,7 @@ public class cloud {
     private int temorature;
     private String time;
     private String date;
-    
+
     public String getLocation() {
         return location;
     }
