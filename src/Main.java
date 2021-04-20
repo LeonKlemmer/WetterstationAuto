@@ -7,8 +7,8 @@ public class Main {
         HighLow highLow = new HighLow(data.clouds);
 
         data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
-        System.out.println(average.getAverage());// get average temp
-        System.out.println(highLow.getHighestTemp().getTemprature());
-        System.out.println(highLow.getLowestTemp().getTemprature());
+        System.out.println("Average : "+average.getAverage());// get average temp
+        System.out.println("Highest : "+highLow.getHighestTemp().getTemprature());
+        System.out.println("Lowest : "+highLow.getLowestTemp().getTemprature());
     }
 }

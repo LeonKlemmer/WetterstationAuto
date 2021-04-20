@@ -11,7 +11,7 @@ public class Average {
         ArrayList<Cloud> cloudList = x;
         long allVallues=0;
         int average=0;
-        for (int i = 0; i < cloudList.size()-1; i++) {
+        for (int i = 0; i < cloudList.size(); i++) {
             allVallues += Long.parseLong(cloudList.get(i).getTemprature());
         }
         average = (int)(allVallues/cloudList.size());
