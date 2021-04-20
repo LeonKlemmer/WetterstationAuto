@@ -26,10 +26,10 @@ public class GetData {
             }
             System.out.println(counter);
                     } catch (FileNotFoundException e) {
-            e.printStackTrace();
+
             System.out.println("Error csv not found");
         }catch (IOException e) {
-            e.printStackTrace();
+
             System.out.println("Error");
         }
 
