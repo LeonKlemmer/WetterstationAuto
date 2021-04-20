@@ -1,9 +1,8 @@
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-        System.out.println("Leon is here");
+import java.io.FileNotFoundException;
 
-        System.out.println("Jan was here");
-        System.out.println("Leon hat einen kleinen Penis");
+public class Main {
+    public static void main(String[] args) throws FileNotFoundException {
+        GetData data = new GetData();
+        data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv");
     }
 }

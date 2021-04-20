@@ -8,15 +8,20 @@ public class GetData {
     public void csvConverter(String path) throws FileNotFoundException {
 
         path = "C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv";
+        String line = "";
         try {
 
             BufferedReader br = new BufferedReader(new FileReader(path));
-            //while()
+            while((line = br.readLine()) != null){
+                String[] values = line.split(",");
+                System.out.println(values[1]);
+            }
                     } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Error while creating List from csv");
-
-
-        }     // Und diese ebenfalls
+            System.out.println("Error csv not found");
+        }catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error csv not found");
+        }
 
 }}
