@@ -5,7 +5,7 @@ import java.io.IOException;
 
 
 public class getData {
-    public static void csvConverter(String path) throws FileNotFoundException {
+    public void csvConverter(String path) throws FileNotFoundException {
 
         path = "C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv";
         try {
