@@ -1,0 +1,2 @@
+# WetterstationAuto
+ Jan, Kay, Leon
