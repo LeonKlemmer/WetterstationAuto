@@ -12,8 +12,8 @@ public class getData {
 
             BufferedReader br = new BufferedReader(new FileReader(path));
 
-                    } catch (IOException e) {
-
+                    } catch (FileNotFoundException e) {
+            e.printStackTrace();
             System.out.println("Error while creating List from csv");
 
 
