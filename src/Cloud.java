@@ -1,8 +1,15 @@
 public class Cloud {
     private String location;
-    private int temorature;
+    private String temorature;
     private String time;
     private String date;
+
+    public Cloud(String location, String temorature, String time, String date) {
+        this.location = location;
+        this.temorature = temorature;
+        this.time = time;
+        this.date = date;
+    }
 
     public String getLocation() {
         return location;
@@ -12,11 +19,11 @@ public class Cloud {
         this.location = location;
     }
 
-    public int getTemorature() {
+    public String getTemorature() {
         return temorature;
     }
 
-    public void setTemorature(int temorature) {
+    public void setTemorature(String temorature) {
         this.temorature = temorature;
     }
 

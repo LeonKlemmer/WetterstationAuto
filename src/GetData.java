@@ -13,8 +13,10 @@ public class GetData {
 
             BufferedReader br = new BufferedReader(new FileReader(path));
             while((line = br.readLine()) != null){
+
                 String[] values = line.split(",");
-                System.out.println(values[1]);
+                System.out.println(values[0]);
+                new Cloud(values[0],values[1],values[2],values[3]);
             }
                     } catch (FileNotFoundException e) {
             e.printStackTrace();
