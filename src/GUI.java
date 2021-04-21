@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 
-public class GUI {
+public class GUI implements ActionListener{
 
     int height = 600;
     int width = 350;
@@ -13,9 +16,21 @@ public class GUI {
     JLabel textTemperatureMonth;
     JLabel textTemperatureYear;
 
+    JButton sortHighest;
+    JButton sortLowest;
+    JTextArea sortedData;
 
+    Average average;
+    HighLow highLow;
+    GetData data;
+    Bubble bubble;
 
-    public GUI() {
+    public GUI() throws FileNotFoundException, InterruptedException {
+
+        data = new GetData();
+        average = new Average(data.clouds);
+        highLow = new HighLow(data.clouds);
+        bubble = new Bubble(data.clouds);
 
         var jf = new JFrame();
         jf.setSize(width, height);
@@ -76,9 +91,62 @@ public class GUI {
         textTemperatureYear.setForeground(Color.LIGHT_GRAY);
         jf.add(textTemperatureYear);
 
+
+
+
+
+        //sortHighest
+        sortHighest = new JButton();
+        sortHighest.setBounds(25, 350, 125, 20);
+        sortHighest.setText("Größte Werte");
+        sortHighest.setBackground(Color.LIGHT_GRAY);
+        sortHighest.setForeground(Color.DARK_GRAY);
+        sortHighest.addActionListener(this);
+        jf.add(sortHighest);
+
+
+
+        //sortLowest
+        sortLowest = new JButton();
+        sortLowest.setBounds(175, 350, 125, 20);
+        sortLowest.setText("Kleinste Werte");
+        sortLowest.setBackground(Color.LIGHT_GRAY);
+        sortLowest.setForeground(Color.DARK_GRAY);
+        sortLowest.addActionListener(this);
+        jf.add(sortLowest);
+
+
+        //sortedData Text Area
+        sortedData = new JTextArea(1,10);
+        sortedData.setBounds(25, 375, 275, 70);
+        sortedData.setBackground(Color.LIGHT_GRAY);
+        sortedData.setForeground(Color.DARK_GRAY);
+        sortedData.setEditable(false);
+        sortedData.setFont(new Font("Calabri", Font.BOLD,12));
+        sortedData.setText("fefsefdffffffffff\n" +
+                "gggfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffwewwwwwwwwwwwwwwwwwwwwf");
+        sortedData.setLineWrap(true);
+
+        jf.add(sortedData);
+
+
         jf.setVisible(true);
 
+
     }
+
+
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()==sortHighest){
+
+            String text = bubble.bubblesortHighest().get(1).getTemprature();
+            System.out.printf(text);
+            //sortedData.setText(bubble.bubblesortHighest().get(0).getTemprature());
+        } else if(e.getSource()==sortLowest){
+            sortedData.setText("rechts");
+        }
+    }
+
 
 
     //überschreibung der werte
@@ -90,5 +158,11 @@ public class GUI {
         textTemperatureMonth.setText("Monatsdurchschnitt: " + temperatureMonth);
         textTemperatureYear.setText("Jahresdurchschnitt: " + temperaturYear);
     }
+
+
+
+
+
+
 
 }

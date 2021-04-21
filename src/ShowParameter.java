@@ -1,9 +1,11 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.Guard;
 import java.util.concurrent.TimeUnit;
 
 public class ShowParameter {
 
-    GUI gui = new GUI();
+
 
     public ShowParameter() throws FileNotFoundException, InterruptedException {
 
@@ -11,18 +13,19 @@ public class ShowParameter {
         Average average = new Average(data.clouds);
         HighLow highLow = new HighLow(data.clouds);
         Bubble bubble = new Bubble(data.clouds);
+        GUI gui = new GUI();
 
+        //data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
+        data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
 
-        data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
-        //data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
         System.out.println("Average : "+average.getAverage());// get average temp
         System.out.println("Highest : "+highLow.getHighestTemp().getTemprature());
         System.out.println("Lowest : "+highLow.getLowestTemp().getTemprature());
 
-        System.out.println("Bubble sort started Lowest ");
+        /*System.out.println("Bubble sort started Lowest ");
         bubble.bubblesortLowest();
         System.out.println("Bubble sort started Highest");
-        bubble.bubblesortHighest();
+        bubble.bubblesortHighest();*/
         for(int i = 0; i <= data.clouds.size(); i++){
             gui.setGuiText(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
 

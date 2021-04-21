@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Bubble {
+
     private ArrayList<Cloud> bubbleClouds = new ArrayList<Cloud>();
 
     public Bubble(ArrayList<Cloud> bubbleClouds) {
@@ -26,6 +27,9 @@ public class Bubble {
         }
         return bubbleClouds;
 }//niedrigste zuerst
+
+
+
     public ArrayList<Cloud> bubblesortHighest() {
         Cloud temp;
         for(int i=1; i<bubbleClouds.size(); i++) {
