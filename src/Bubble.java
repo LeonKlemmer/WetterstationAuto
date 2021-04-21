@@ -21,10 +21,11 @@ public class Bubble {
             }
 
 
-    }for(int g=0; g<bubbleClouds.size(); g++) {
+    }
+        /*for(int g=0; g<bubbleClouds.size(); g++) {
             System.out.println(g);
             System.out.println("Bubble : "+bubbleClouds.get(g).getTemprature());
-        }
+        }*/
         return bubbleClouds;
 }//niedrigste zuerst
 
@@ -43,10 +44,12 @@ public class Bubble {
             }
 
 
-        }for(int g=0; g<bubbleClouds.size(); g++) {
+        }
+
+        /*for(int g=0; g<bubbleClouds.size(); g++) {
             System.out.println(g);
             System.out.println("Bubble : "+bubbleClouds.get(g).getTemprature());
-        }
+        }*/
         return bubbleClouds;
     }//Höchste zuerst
 

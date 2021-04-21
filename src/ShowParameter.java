@@ -27,7 +27,7 @@ public class ShowParameter {
         System.out.println("Bubble sort started Highest");
         bubble.bubblesortHighest();*/
         for(int i = 0; i <= data.clouds.size(); i++){
-            gui.setGuiText(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature(), "buy full version", "buy full version");
+            gui.setGuiText(data.clouds.get(i).getLocation(), data.clouds.get(i).getDate(), data.clouds.get(i).getTime(), data.clouds.get(i).getTemprature());
 
             TimeUnit.SECONDS.sleep(3);
             //TimeUnit.MINUTES.sleep(30);
