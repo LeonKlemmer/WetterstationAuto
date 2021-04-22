@@ -1,6 +1,4 @@
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.security.Guard;
 import java.util.concurrent.TimeUnit;
 
 public class ShowParameter {
@@ -12,7 +10,6 @@ public class ShowParameter {
         GetData data = new GetData();
         Average average = new Average(data.clouds);
         HighLow highLow = new HighLow(data.clouds);
-        Bubble bubble = new Bubble(data.clouds);
         GUI gui = new GUI();
 
         //data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
