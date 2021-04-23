@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 
-public class GUI implements ActionListener{
+public class GUI implements ActionListener {
 
     int height = 600;
     int width = 350;
@@ -25,15 +25,14 @@ public class GUI implements ActionListener{
     GetData data;
     Bubble bubble;
 
-
     public GUI() throws FileNotFoundException, InterruptedException {
 
         data = new GetData();
         average = new Average(data.clouds);
         highLow = new HighLow(data.clouds);
         bubble = new Bubble(data.clouds);
-        data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
-
+        // data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
+        data.csvConverter("C:\\Users\\klemm\\Documents\\GitHub\\WetterstationAuto\\Data\\Wetter.csv");
 
         var jf = new JFrame();
         jf.setSize(width, height);
@@ -44,61 +43,55 @@ public class GUI implements ActionListener{
         jf.setLocationRelativeTo(null);
         jf.getContentPane().setBackground(Color.DARK_GRAY);
 
-
-
-        //Standort
+        // Standort
         textLocation = new JLabel();
         textLocation.setBounds(50, 25, 250, 30);
         textLocation.setText("Standort: ");
-        textLocation.setFont(new Font("Calabri", Font.ITALIC,16));
+        textLocation.setFont(new Font("Calabri", Font.ITALIC, 16));
         textLocation.setForeground(Color.LIGHT_GRAY);
         jf.add(textLocation);
 
-        //Datum
+        // Datum
         textDate = new JLabel();
         textDate.setBounds(50, 75, 250, 30);
-        textDate.setFont(new Font("Calabri", Font.ITALIC,16));
+        textDate.setFont(new Font("Calabri", Font.ITALIC, 16));
         textDate.setForeground(Color.LIGHT_GRAY);
         textDate.setText("Datum: ");
         jf.add(textDate);
 
-        //Uhrzeit
+        // Uhrzeit
         textTime = new JLabel();
         textTime.setBounds(50, 125, 250, 30);
         textTime.setText("Uhrzeit: ");
-        textTime.setFont(new Font("Calabri", Font.ITALIC,16));
+        textTime.setFont(new Font("Calabri", Font.ITALIC, 16));
         textTime.setForeground(Color.LIGHT_GRAY);
         jf.add(textTime);
 
-        //Temperatur
+        // Temperatur
         textTemperature = new JLabel();
         textTemperature.setBounds(50, 175, 250, 30);
         textTemperature.setText("Temperatur: ");
-        textTemperature.setFont(new Font("Calabri", Font.ITALIC,16));
+        textTemperature.setFont(new Font("Calabri", Font.ITALIC, 16));
         textTemperature.setForeground(Color.LIGHT_GRAY);
         jf.add(textTemperature);
 
-        //MonatDurchschnitt
-        /*textTemperatureMonth = new JLabel();
+        // MonatDurchschnitt
+
+        textTemperatureMonth = new JLabel();
         textTemperatureMonth.setBounds(50, 185, 250, 30);
         textTemperatureMonth.setText("Monatsdurchschnitt: ");
-        textTemperatureMonth.setFont(new Font("Calabri", Font.ITALIC,16));
+        textTemperatureMonth.setFont(new Font("Calabri", Font.ITALIC, 16));
         textTemperatureMonth.setForeground(Color.LIGHT_GRAY);
         jf.add(textTemperatureMonth);
 
-        //JahresDurchschnitt
-        textTemperatureYear = new JLabel();
+        // JahresDurchschnitt textTemperatureYear = new JLabel();
         textTemperatureYear.setBounds(50, 300, 250, 30);
         textTemperatureYear.setText("Jahresdurchschnitt: ");
-        textTemperatureYear.setFont(new Font("Calabri", Font.ITALIC,16));
+        textTemperatureYear.setFont(new Font("Calabri", Font.ITALIC, 16));
         textTemperatureYear.setForeground(Color.LIGHT_GRAY);
-        jf.add(textTemperatureYear);*/
+        jf.add(textTemperatureYear);
 
-
-
-
-
-        //sortHighest
+        // sortHighest
         sortHighest = new JButton();
         sortHighest.setBounds(25, 250, 125, 20);
         sortHighest.setText("Größte Werte");
@@ -107,9 +100,7 @@ public class GUI implements ActionListener{
         sortHighest.addActionListener(this);
         jf.add(sortHighest);
 
-
-
-        //sortLowest
+        // sortLowest
         sortLowest = new JButton();
         sortLowest.setBounds(175, 250, 125, 20);
         sortLowest.setText("Kleinste Werte");
@@ -118,28 +109,24 @@ public class GUI implements ActionListener{
         sortLowest.addActionListener(this);
         jf.add(sortLowest);
 
-
-        //sortedData Text Area
-        sortedData = new JTextArea(1,10);
+        // sortedData Text Area
+        sortedData = new JTextArea(1, 10);
         sortedData.setBounds(25, 275, 275, 70);
         sortedData.setBackground(Color.LIGHT_GRAY);
         sortedData.setForeground(Color.DARK_GRAY);
         sortedData.setEditable(false);
-        sortedData.setFont(new Font("Calabri", Font.BOLD,12));
+        sortedData.setFont(new Font("Calabri", Font.BOLD, 12));
         sortedData.setText("Hier könnte deine Werbung stehen!");
         sortedData.setLineWrap(true);
 
         jf.add(sortedData);
 
-
         jf.setVisible(true);
-
 
     }
 
-
-    public void actionPerformed(ActionEvent e){
-        if(e.getSource()==sortHighest){
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == sortHighest) {
 
             String saveText;
 
@@ -152,7 +139,7 @@ public class GUI implements ActionListener{
             sortedData.setText(saveText);
             saveText = null;
 
-        } else if(e.getSource()==sortLowest){
+        } else if (e.getSource() == sortLowest) {
 
             String saveText;
 
@@ -167,22 +154,14 @@ public class GUI implements ActionListener{
         }
     }
 
-
-
-    //überschreibung der werte
-    public void setGuiText(String location, String date, String time, String temperature){
+    // überschreibung der werte
+    public void setGuiText(String location, String date, String time, String temperature) {
         textLocation.setText("Standort: " + location);
         textDate.setText("Datum: " + date);
         textTime.setText("Uhrzeit: " + time);
         textTemperature.setText("Temperatur: " + temperature + "°");
-        //textTemperatureMonth.setText("Monatsdurchschnitt: " + temperatureMonth);
-        //textTemperatureYear.setText("Jahresdurchschnitt: " + temperaturYear);
+        textTemperatureMonth.setText("Monatsdurchschnitt: " + temperatureMonth);
+        textTemperatureYear.setText("Jahresdurchschnitt: " + temperaturYear);
     }
-
-
-
-
-
-
 
 }
