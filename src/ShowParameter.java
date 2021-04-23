@@ -12,8 +12,8 @@ public class ShowParameter {
         HighLow highLow = new HighLow(data.clouds);
         GUI gui = new GUI();
 
-        //data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
-        data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
+        data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv"); //generate list with Cloud objekts where data is stored in
+        //data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
 
         System.out.println("Average : "+average.getAverage());// get average temp
         System.out.println("Highest : "+highLow.getHighestTemp().getTemprature());

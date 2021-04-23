@@ -32,7 +32,7 @@ public class GUI implements ActionListener {
         highLow = new HighLow(data.clouds);
         bubble = new Bubble(data.clouds);
         // data.csvConverter("C:\\Irgendwie\\Development\\WetterstationAuto\\Data\\Wetter.csv");
-        data.csvConverter("C:\\Users\\klemm\\Documents\\GitHub\\WetterstationAuto\\Data\\Wetter.csv");
+        data.csvConverter("C:\\Users\\klemm\\IdeaProjects\\WetterstationAuto\\Data\\Wetter.csv");
 
         var jf = new JFrame();
         jf.setSize(width, height);
