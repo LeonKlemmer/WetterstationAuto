@@ -76,20 +76,20 @@ public class GUI implements ActionListener {
         jf.add(textTemperature);
 
         // MonatDurchschnitt
-
-        textTemperatureMonth = new JLabel();
-        textTemperatureMonth.setBounds(50, 185, 250, 30);
-        textTemperatureMonth.setText("Monatsdurchschnitt: ");
-        textTemperatureMonth.setFont(new Font("Calabri", Font.ITALIC, 16));
-        textTemperatureMonth.setForeground(Color.LIGHT_GRAY);
-        jf.add(textTemperatureMonth);
-
-        // JahresDurchschnitt textTemperatureYear = new JLabel();
-        textTemperatureYear.setBounds(50, 300, 250, 30);
-        textTemperatureYear.setText("Jahresdurchschnitt: ");
-        textTemperatureYear.setFont(new Font("Calabri", Font.ITALIC, 16));
-        textTemperatureYear.setForeground(Color.LIGHT_GRAY);
-        jf.add(textTemperatureYear);
+        /*
+         * textTemperatureMonth = new JLabel(); textTemperatureMonth.setBounds(50, 185,
+         * 250, 30); textTemperatureMonth.setText("Monatsdurchschnitt: ");
+         * textTemperatureMonth.setFont(new Font("Calabri", Font.ITALIC,16));
+         * textTemperatureMonth.setForeground(Color.LIGHT_GRAY);
+         * jf.add(textTemperatureMonth);
+         * 
+         * //JahresDurchschnitt textTemperatureYear = new JLabel();
+         * textTemperatureYear.setBounds(50, 300, 250, 30);
+         * textTemperatureYear.setText("Jahresdurchschnitt: ");
+         * textTemperatureYear.setFont(new Font("Calabri", Font.ITALIC,16));
+         * textTemperatureYear.setForeground(Color.LIGHT_GRAY);
+         * jf.add(textTemperatureYear);
+         */
 
         // sortHighest
         sortHighest = new JButton();
@@ -160,8 +160,8 @@ public class GUI implements ActionListener {
         textDate.setText("Datum: " + date);
         textTime.setText("Uhrzeit: " + time);
         textTemperature.setText("Temperatur: " + temperature + "°");
-        textTemperatureMonth.setText("Monatsdurchschnitt: " + temperatureMonth);
-        textTemperatureYear.setText("Jahresdurchschnitt: " + temperaturYear);
+        // textTemperatureMonth.setText("Monatsdurchschnitt: " + temperatureMonth);
+        // textTemperatureYear.setText("Jahresdurchschnitt: " + temperaturYear);
     }
 
 }
