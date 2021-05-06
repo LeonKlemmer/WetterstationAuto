@@ -6,7 +6,10 @@ import java.util.ArrayList;
 
 public class GetData {
     public ArrayList<Cloud> clouds = new ArrayList<Cloud>();
-
+    /**
+     * Csv datei wird eingelesen
+     * @param path gibt den pfad der csv datei an
+     */
     public void csvConverter(String path) throws FileNotFoundException {
 
         int counter = 0;

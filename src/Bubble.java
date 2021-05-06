@@ -7,7 +7,10 @@ public class Bubble {
     public Bubble(ArrayList<Cloud> bubbleClouds) {
         this.bubbleClouds = bubbleClouds;
     }
-
+    /**
+     * Bubblesort sortierung für die niedrigste temperatur
+     * @return sotierte Arraylist mit dem cloud object
+     */
     public ArrayList<Cloud> bubblesortLowest() {
         Cloud temp;
         for (int i = 1; i < bubbleClouds.size(); i++) {
@@ -29,6 +32,10 @@ public class Bubble {
         return bubbleClouds;
     }// niedrigste zuerst
 
+    /**
+     * Bubblesort sortierung für die höchste Temperatur
+     * @return sotierte Arraylist mit dem cloud object
+     */
     public ArrayList<Cloud> bubblesortHighest() {
         Cloud temp;
         for (int i = 1; i < bubbleClouds.size(); i++) {
